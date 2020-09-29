@@ -10,6 +10,7 @@ main {
     min-height: 100vh;
     justify-content: center;
     padding: 0 30px;
+    margin-bottom: -8%;
     text-align: center;
 }
 
@@ -43,3 +44,4 @@ main > .tagline {
 .icons-social {
     text-align: center;
 }
+
