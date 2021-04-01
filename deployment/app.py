@@ -8,7 +8,7 @@ from aws_cdk import (aws_certificatemanager as cert_manager,
                      aws_s3_deployment as s3_deployment,
                      core)
 
-HOSTED_ZONE_ID = "Z15QG5MXBR7WXN"
+HOSTED_ZONE_ID = "Z0681220185CG6SLGWTT7"
 
 
 class WebsiteStack(core.Stack):
@@ -98,7 +98,7 @@ class WebsiteStack(core.Stack):
 
 
 app = core.App(auto_synth=True)
-WebsiteStack(app, "jbirdDevDeployment", "jbird.dev",
+WebsiteStack(app, "jbirdDevDeployment", "thestanfordgirls.com",
              env=core.Environment(region='us-east-1'))
 
 app.synth()
