@@ -1,10 +1,1 @@
 .idea
-*.iml
-**/__pycahe__
-*.pyc
-*.pyi
-**/.env
-**/cdk.out
-**/.DS_Store
-**/node_modules
-venv/
