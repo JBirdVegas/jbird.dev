@@ -97,7 +97,6 @@ func makeTaglineDiv(text string) Value {
 	style.Set("font-size", "1.5rem")
 	style.Set("font-weight", "100")
 	style.Set("margin", "1.5rem 0")
-	style.Set("margin-bottom", "-4%")
 	style.Set("font-family", "'Ubuntu Mono',sans-serif")
 	return div
 }
@@ -136,12 +135,14 @@ func main() {
 	for domain, label := range demos {
 		demoIconsDiv.Call("appendChild", createIconAndTextLink(&label, domain, "fas fa-user-secret"))
 	}
+	demosDiv := makeTaglineDiv(demosText)
+	demosDiv.Get("style").Set("margin-bottom", "-4%")
 
 	mainDiv := Document.GetElementById("main")
 	mainDiv.Call("appendChild", makeTitleDiv())
 	mainDiv.Call("appendChild", makeTaglineDiv(taglineText))
 	mainDiv.Call("appendChild", contentIconsDiv)
-	mainDiv.Call("appendChild", makeTaglineDiv(demosText))
+	mainDiv.Call("appendChild", demosDiv)
 	mainDiv.Call("appendChild", demoIconsDiv)
 	mainDiv.Call("appendChild", makeFollowMeTwitterLink())
 }
