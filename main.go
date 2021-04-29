@@ -3,7 +3,6 @@
 package main
 
 import (
-	"fmt"
 	. "github.com/siongui/godom/wasm"
 )
 
@@ -31,7 +30,7 @@ func createIconAndTextLink(text *string, domain, fontAwesomeIcon string) Value {
 	a.Set("target", "_blank")
 
 	if text == nil {
-		a.Set("href", fmt.Sprintf("https://%s", domain))
+		a.Set("href", "https://"+domain)
 	} else {
 		a.Set("href", domain)
 	}
